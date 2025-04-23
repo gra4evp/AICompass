@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>  <!-- Динамический заголовок -->
+</head>
+<body>
+    <h1>Привет, {{ username }}!</h1>
+    {% if is_admin %}  <!-- Условные блоки -->
+        <p>Вы админ.</p>
+    {% endif %}
+</body>
+</html>

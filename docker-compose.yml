@@ -7,10 +7,10 @@ services:
     ports:
       - "8015:8015"
     volumes:
-      - ./services/backend:./  # Для hot-reload кода
+      - ./services/backend:/code:rw  # Для hot-reload кода
     environment:
       - TZ=Europe/Moscow  # Временная зона
     env_file:
       - path: ./services/backend/.env
         required: True
-    command: python3 main.py
+    command: python3 app/main.py

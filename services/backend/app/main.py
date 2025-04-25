@@ -70,4 +70,10 @@ app.include_router(base_router)
 # Запуск сервер
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.getenv("APP_PORT", 8015))  # Берём порт из переменной или 8000 по умолчанию
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=port,
+        reload=True
+    )

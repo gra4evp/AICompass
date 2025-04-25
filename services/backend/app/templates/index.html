@@ -1,12 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>{{ title }}</title>  <!-- Динамический заголовок -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AICompass - Навигатор по Machine Learning</title>
+    <!-- Подключите это в базовом шаблоне -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <h1>Привет, {{ username }}!</h1>
-    {% if is_admin %}  <!-- Условные блоки -->
-        <p>Вы админ.</p>
-    {% endif %}
+<body class="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen">
+    <!-- Навигационная панель -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="/" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-gray-900 text-2xl">
+                            <i class="fas fa-robot text-blue-600 mr-2"></i>AICompass
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="/ml" class="py-4 px-2 text-blue-600 font-semibold">Classical ML</a>
+                    <a href="/dl" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Deep Learning</a>
+                    <a href="/math" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Математика</a>
+                    <a href="https://github.com/yourusername/ai-notes" target="_blank" 
+                       class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                        <i class="fab fa-github mr-2"></i>Конспекты
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold text-gray-800 mb-6">
+                Изучайте Machine Learning <br> системно и понятно
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                Практические руководства, визуализации и интерактивные примеры для каждого алгоритма
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Classical ML</h3>
+                    <p class="text-gray-600">От линейной регрессии до ансамблей</p>
+                </div>
+                <!-- Аналогичные блоки для DL и Math -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Интерактивный пример (можно подключить Alpine.js) -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Попробуйте прямо сейчас</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Выберите алгоритм:</label>
+                        <select class="w-full p-3 border rounded-lg">
+                            <option>K-ближайших соседей</option>
+                            <option>Дерево решений</option>
+                        </select>
+                    </div>
+                    <!-- Параметры алгоритма -->
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <!-- Место для визуализации (можно Chart.js/D3.js) -->
+                    <div id="visualization" class="h-64 flex items-center justify-center">
+                        <p class="text-gray-500">Здесь будет визуализация</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p>© 2025 AICompass | Ваш гид в мире искусственного интеллекта</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js" defer></script>
 </body>
 </html>

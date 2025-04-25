@@ -4,12 +4,13 @@ services:
     build:
       context: ./services/backend
       dockerfile: Dockerfile
-    ports:
-      - "8015:8015"
-    volumes:
-      - ./services/backend:/code:rw  # Для hot-reload кода
     environment:
       - TZ=Europe/Moscow  # Временная зона
+      - APP_PORT=${APP_PORT} # Добавляем переменную для порта
+    ports:
+      - "8015:${APP_PORT}"
+    volumes:
+      - ./services/backend:/code:rw  # Для hot-reload кода
     env_file:
       - path: ./services/backend/.env
         required: True

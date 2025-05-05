@@ -35,4 +35,4 @@ async def decision_trees(request: Request):
 
 @router.get("/random-forest", response_class=HTMLResponse)
 async def random_forest(request: Request):
-    return templates.TemplateResponse("ml/random_forest.html", {"request": request}) 
+    return templates.TemplateResponse("ml/random_forest.html", {"request": request})

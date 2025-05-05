@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AICompass - Линейная Регрессия</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .github-content {
+            margin-top: 2rem;
+        }
+        .github-content pre {
+            background-color: #1a202c;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .github-content code {
+            background-color: #f7fafc;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen">
+    <!-- Навигационная панель -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="/" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-gray-900 text-2xl">
+                            <i class="fas fa-robot text-blue-600 mr-2"></i>AICompass
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="/ml" class="py-4 px-2 text-blue-600 font-semibold">Classical ML</a>
+                    <a href="/dl" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Deep Learning</a>
+                    <a href="/math" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Математика</a>
+                    <a href="https://github.com/yourusername/ai-notes" target="_blank" 
+                       class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                        <i class="fab fa-github mr-2"></i>Конспекты
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6">Линейная Регрессия</h1>
+            
+            <div class="prose max-w-none">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Что такое Линейная Регрессия?</h2>
+                <p class="text-gray-600 mb-4">
+                    Линейная регрессия - это один из самых простых и популярных алгоритмов машинного обучения. 
+                    Она используется для предсказания непрерывной целевой переменной на основе одной или нескольких 
+                    независимых переменных, предполагая линейную зависимость между ними.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Основные концепции</h2>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Простая линейная регрессия</h3>
+                        <p class="text-gray-600">Одна независимая переменная и одна зависимая переменная.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-semibold text-green-700 mb-2">Множественная линейная регрессия</h3>
+                        <p class="text-gray-600">Несколько независимых переменных и одна зависимая переменная.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Математическая формула</h2>
+                <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                    <p class="text-gray-800 font-mono">
+                        y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ + ε
+                    </p>
+                </div>
+
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Основные этапы</h2>
+                <ol class="list-decimal list-inside text-gray-600 space-y-2">
+                    <li>Подготовка данных</li>
+                    <li>Выбор признаков</li>
+                    <li>Обучение модели</li>
+                    <li>Оценка качества</li>
+                    <li>Интерпретация результатов</li>
+                </ol>
+
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4 mt-8">Пример кода</h2>
+                <div class="bg-gray-800 text-white p-4 rounded-lg mb-6">
+                    <pre class="text-sm">
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Создание и обучение модели
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Предсказание
+predictions = model.predict(X_test)
+                    </pre>
+                </div>
+
+                <!-- GitHub Content Section -->
+                <div class="github-content">
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Дополнительные материалы</h2>
+                    <div id="github-content" class="prose max-w-none">
+                        <div class="flex justify-center">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p>© 2025 AICompass | Ваш гид в мире искусственного интеллекта</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function loadGitHubContent() {
+            try {
+                const repoUrl = 'https://github.com/gra4evp/Machine_Learning/tree/main/01_Classical_ML/01_Linear_Regression';
+                const path = 'README.md';
+                
+                const response = await fetch(`/github/content?repo_url=${encodeURIComponent(repoUrl)}&path=${encodeURIComponent(path)}`);
+                const data = await response.json();
+                
+                document.getElementById('github-content').innerHTML = data.content;
+            } catch (error) {
+                console.error('Error loading GitHub content:', error);
+                document.getElementById('github-content').innerHTML = `
+                    <div class="text-red-600">
+                        Ошибка загрузки дополнительных материалов. Пожалуйста, попробуйте позже.
+                    </div>
+                `;
+            }
+        }
+
+        // Загружаем контент при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadGitHubContent);
+    </script>
+</body>
+</html> 

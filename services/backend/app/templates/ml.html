@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AICompass - Classical ML</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen">
+    <!-- Навигационная панель -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="/" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-gray-900 text-2xl">
+                            <i class="fas fa-robot text-blue-600 mr-2"></i>AICompass
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="/ml" class="py-4 px-2 text-blue-600 font-semibold">Classical ML</a>
+                    <a href="/dl" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Deep Learning</a>
+                    <a href="/math" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Математика</a>
+                    <a href="https://github.com/yourusername/ai-notes" target="_blank" 
+                       class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                        <i class="fab fa-github mr-2"></i>Конспекты
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-8">Classical Machine Learning</h1>
+        
+        <!-- Темы -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Intro -->
+            <a href="/ml/intro" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl mr-4">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Intro</h3>
+                        <p class="text-gray-600">Введение в машинное обучение</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Linear Regression -->
+            <a href="/ml/linear-regression" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl mr-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Linear Regression</h3>
+                        <p class="text-gray-600">Линейная регрессия</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Regularization -->
+            <a href="/ml/regularization" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl mr-4">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Regularization</h3>
+                        <p class="text-gray-600">Регуляризация</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Classification -->
+            <a href="/ml/classification" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl mr-4">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Classification</h3>
+                        <p class="text-gray-600">Классификация</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Logistic Regression -->
+            <a href="/ml/logistic-regression" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl mr-4">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Logistic Regression</h3>
+                        <p class="text-gray-600">Логистическая регрессия</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Decision Trees -->
+            <a href="/ml/decision-trees" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl mr-4">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Decision Trees</h3>
+                        <p class="text-gray-600">Деревья решений</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Random Forest -->
+            <a href="/ml/random-forest" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                <div class="flex items-center">
+                    <div class="text-blue-600 text-2xl mr-4">
+                        <i class="fas fa-forest"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Random Forest</h3>
+                        <p class="text-gray-600">Случайный лес</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p>© 2025 AICompass | Ваш гид в мире искусственного интеллекта</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

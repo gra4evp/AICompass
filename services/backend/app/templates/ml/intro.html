@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AICompass - Введение в ML</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen">
+    <!-- Навигационная панель -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="/" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-gray-900 text-2xl">
+                            <i class="fas fa-robot text-blue-600 mr-2"></i>AICompass
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="/ml" class="py-4 px-2 text-blue-600 font-semibold">Classical ML</a>
+                    <a href="/dl" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Deep Learning</a>
+                    <a href="/math" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition">Математика</a>
+                    <a href="https://github.com/yourusername/ai-notes" target="_blank" 
+                       class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                        <i class="fab fa-github mr-2"></i>Конспекты
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6">Введение в Машинное Обучение</h1>
+            
+            <div class="prose max-w-none">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Что такое Машинное Обучение?</h2>
+                <p class="text-gray-600 mb-4">
+                    Машинное обучение (ML) - это подраздел искусственного интеллекта, который фокусируется на разработке систем, 
+                    способных учиться и улучшаться на основе опыта. Вместо того чтобы явно программировать правила, 
+                    мы позволяем алгоритмам находить закономерности в данных.
+                </p>
+
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Основные типы машинного обучения</h2>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Обучение с учителем</h3>
+                        <p class="text-gray-600">Алгоритм учится на размеченных данных, где известны правильные ответы.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-semibold text-green-700 mb-2">Обучение без учителя</h3>
+                        <p class="text-gray-600">Алгоритм находит закономерности в данных без предварительных меток.</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h3 class="text-xl font-semibold text-purple-700 mb-2">Обучение с подкреплением</h3>
+                        <p class="text-gray-600">Алгоритм учится через взаимодействие с окружением и получение наград.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Основные этапы работы с ML</h2>
+                <ol class="list-decimal list-inside text-gray-600 space-y-2">
+                    <li>Сбор и подготовка данных</li>
+                    <li>Выбор и разработка признаков</li>
+                    <li>Выбор модели и её обучение</li>
+                    <li>Оценка и валидация модели</li>
+                    <li>Развертывание и мониторинг</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p>© 2025 AICompass | Ваш гид в мире искусственного интеллекта</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
